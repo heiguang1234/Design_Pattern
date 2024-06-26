@@ -14,10 +14,12 @@ public class ThreadMethod02 {
             Thread.sleep(1000);
             System.out.println("主线程吃了" + i + "个包子");
             if (i==5){
-                System.out.println("这里让自线程插队");
+                System.out.println("这里子线程插队");
                 t2.join();
+            //     asdfhjfhsjd
             }
         }
+
 
     }
 }
