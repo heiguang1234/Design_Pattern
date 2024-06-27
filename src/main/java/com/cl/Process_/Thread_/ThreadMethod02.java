@@ -14,12 +14,18 @@ public class ThreadMethod02 {
             Thread.sleep(1000);
             System.out.println("主线程吃了" + i + "个包子");
             if (i==5){
+
 //              这里实现线程礼让，但是在资源十分丰富的情况下 礼让不会成功
                 Thread.yield();
                 System.out.println("这里让子线  程插队");
+
+                System.out.println("这里子线程插队");
+
                 t2.join();
+            //     asdfhjfhsjd
             }
         }
+
 
     }
 }
